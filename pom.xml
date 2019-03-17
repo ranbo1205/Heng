@@ -49,6 +49,14 @@
             <version>2.3.0</version>
         </dependency>
 
+
+        <!--add spring HAL JSON support-->
+        <dependency>
+            <groupId>org.springframework.hateoas</groupId>
+            <artifactId>spring-hateoas</artifactId>
+        </dependency>
+
+
     </dependencies>
 
 
