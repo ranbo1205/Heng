@@ -3,6 +3,7 @@ package com.jk.heng.route.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.jk.heng.cache.util.serialize.CustomSerializer;
+import org.springframework.hateoas.ResourceSupport;
 
 import java.util.Date;
 
