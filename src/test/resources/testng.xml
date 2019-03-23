@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestAll">
+
+	<test name="final">
+		<classes>
+			<class name="com.jk.heng.testng.service.group.TestUI" />
+			<class name="com.jk.heng.testng.service.group.TestGroup" />
+		</classes>
+	</test>
+	
+	 <!--Run test method on group "uiCall" only-->
+	<test name="TestOnlyUICall">
+		<groups>
+			<run>
+				<include name="uiCall" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.jk.heng.testng.service.group.TestUI" />
+			<class name="com.jk.heng.testng.service.group.TestGroup" />
+		</classes>
+
+	</test>
+	
+</suite>

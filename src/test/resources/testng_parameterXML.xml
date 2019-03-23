@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestParameterXML">
+	<test name="TestParameterByXML">
+		<classes>
+			<class name="com.jk.heng.testng.service.parameter.TestParameterXML">
+				<parameter name="dbconfig" value="db.properties"></parameter>
+				<parameter name="poolsize" value="12"></parameter>
+			</class>
+
+		</classes>
+
+	</test>
+</suite>

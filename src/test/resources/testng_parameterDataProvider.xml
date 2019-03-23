@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestParameterDataProvider">
+	<test name="dataProviderGroupAOnly">
+		<groups>
+			<run>
+				<include name="groupA"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.jk.heng.testng.service.parameter.TestParameterDataProvider">
+			</class>
+		</classes>
+
+	</test>
+
+	<test name="dataProviderGroupB">
+		<groups>
+			<run>
+				<include name="groupB"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.jk.heng.testng.service.parameter.TestParameterDataProvider">
+			</class>
+		</classes>
+
+	</test>
+</suite>
