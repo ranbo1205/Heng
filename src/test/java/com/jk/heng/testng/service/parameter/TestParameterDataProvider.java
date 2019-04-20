@@ -69,6 +69,33 @@ public class TestParameterDataProvider {
     }
 
 
+    @Test(
+            dataProvider = "apacLinkOnly",
+            groups={"groupA","groupB"})
+    public void test_verify_group_in_method(String apacLink,String expected ,ITestContext context){
 
+        String local_env = null;
+        for(String group : context.getIncludedGroups()){
+            if(group.equals("groupA")){
+                local_env = "LOCAL_P2";
+            }else if(group.equals("groupB")){
+                local_env = "LOCAL_P7";
+            }
+        }
+//        System.out.println("******context length :"+context.getIncludedGroups().length);
+        System.out.println("******current enviroment :"+local_env);
+
+        Assert.assertEquals(apacLink,expected);
+
+    }
+
+
+    @DataProvider(name = "apacLinkOnly")
+    public Object[][] getApacLink(){
+        return new Object[][]{
+                {"display flash","display flash"},
+                {"cash advice","cash advice"}
+        };
+    }
 
 }
